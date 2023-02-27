@@ -40,7 +40,7 @@ function Child(props) {
 
         /* for take value of exchange */
    useEffect(()=>{
-    fetch( `https://api.apilayer.com/exchangerates_data/convert?to=${to}&from=${selectedValue1}&amount=${amount}`,  requestOptions)
+    fetch( `https://api.apilayer.com/exchangerates_data/convert?to=${selectedValue2}&from=${selectedValue1}&amount=${amount}`,  requestOptions)
     .then(response => response.text())
     .then(result => setResult(result))
     .catch(error => console.log('error', error));
